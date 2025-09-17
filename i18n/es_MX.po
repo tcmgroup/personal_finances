@@ -32,6 +32,36 @@ msgid "Amount"
 msgstr "Monto"
 
 #. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__apply_on
+msgid "Apply On"
+msgstr "Aplica en"
+
+#. module: personal_finances
+#: model:ir.model,name:personal_finances.model_bank_account
+#: model:ir.ui.view,arch_db:personal_finances.bank_account_view_form
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Bank Account"
+msgstr "Cuenta Bancaria"
+
+#. module: personal_finances
+#: model:ir.actions.act_window,name:personal_finances.bank_account_action
+#: model:ir.ui.menu,name:personal_finances.bank_account_menu
+#: model:ir.ui.view,arch_db:personal_finances.bank_account_view_tree
+msgid "Bank Accounts"
+msgstr "Cuentas Bancarias"
+
+#. module: personal_finances
+#: model:ir.model.fields,selection:personal_finances.field_personal_finances_transaction__status
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: personal_finances
+#: model:ir.model.fields,selection:personal_finances.field_personal_finances_transaction__status
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_bank_account__color
 #: model:ir.model.fields,field_description:personal_finances.field_personal_finances_tag__color
 msgid "Color"
 msgstr "Color"
@@ -40,6 +70,11 @@ msgstr "Color"
 #: model:ir.ui.menu,name:personal_finances.personal_finances_menu_configuration
 msgid "Configuration"
 msgstr "Configuración"
+
+#. module: personal_finances
+#: model:ir.actions.act_window,help:personal_finances.bank_account_action
+msgid "Create a new bank account"
+msgstr "Crea una nueva cuenta bancaria"
 
 #. module: personal_finances
 #: model:ir.actions.act_window,help:personal_finances.personal_finances_tag_action
@@ -97,6 +132,7 @@ msgstr "Ayuda a administrar tus finanzas personales."
 
 #. module: personal_finances
 #: model:ir.model.fields,selection:personal_finances.field_personal_finances_tag__type
+#: model:ir.model.fields,selection:personal_finances.field_personal_finances_transaction__status
 #: model:ir.model.fields,selection:personal_finances.field_personal_finances_transaction__type
 #: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
 msgid "Income"
@@ -114,6 +150,7 @@ msgid "Month"
 msgstr "Mes"
 
 #. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_bank_account__name
 #: model:ir.model.fields,field_description:personal_finances.field_personal_finances_tag__name
 msgid "Name"
 msgstr "Nombre"
@@ -122,6 +159,16 @@ msgstr "Nombre"
 #: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__note
 msgid "Note"
 msgstr "Nota"
+
+#. module: personal_finances
+#: model:ir.model.fields,selection:personal_finances.field_personal_finances_transaction__status
+msgid "Paid"
+msgstr "Pagado"
+
+#. module: personal_finances
+#: model:ir.model.fields,selection:personal_finances.field_personal_finances_transaction__status
+msgid "Pending"
+msgstr "Pendiente"
 
 #. module: personal_finances
 #: model:ir.module.category,name:personal_finances.module_category_personal_finances
@@ -150,9 +197,20 @@ msgid "Personal Finances Transaction User Rule"
 msgstr "Regla de Usuario para Transacción de Finanzas Personales"
 
 #. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_bank_account__reference
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: personal_finances
 #: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
 msgid "Search Transactions"
 msgstr "Buscar Transacciones"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__status
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Status"
+msgstr "Estado"
 
 #. module: personal_finances
 #: model:ir.ui.view,arch_db:personal_finances.personal_finances_tag_view_form

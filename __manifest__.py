@@ -12,6 +12,7 @@
     'data': [
         'security/personal_finances_security.xml',
         'security/ir.model.access.csv',
+        'views/bank_account_views.xml',
         'views/personal_finances_transaction_views.xml',
         'views/personal_finances_tag_views.xml',
         'views/personal_finances_menus.xml',

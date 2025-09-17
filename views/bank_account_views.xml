@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="bank_account_view_tree" model="ir.ui.view">
+            <field name="name">bank.account.tree</field>
+            <field name="model">bank.account</field>
+            <field name="arch" type="xml">
+                <tree string="Bank Accounts">
+                    <field name="name"/>
+                    <field name="reference"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="bank_account_view_form" model="ir.ui.view">
+            <field name="name">bank.account.form</field>
+            <field name="model">bank.account</field>
+            <field name="arch" type="xml">
+                <form string="Bank Account">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="reference"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="bank_account_action" model="ir.actions.act_window">
+            <field name="name">Bank Accounts</field>
+            <field name="res_model">bank.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new bank account
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="bank_account_menu"
+                  name="Bank Accounts"
+                  parent="personal_finances.personal_finances_menu_configuration"
+                  action="bank_account_action"
+                  sequence="10"/>
+
+    </data>
+</odoo>

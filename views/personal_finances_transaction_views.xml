@@ -10,6 +10,8 @@
                     <field name="date"/>
                     <field name="name"/>
                     <field name="type"/>
+                    <field name="status"/>
+                    <field name="apply_on"/>
                     <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                     <field name="amount" sum="Total"/>
                     <field name="currency_id" invisible="1"/>
@@ -25,6 +27,8 @@
                 <search string="Search Transactions">
                     <field name="name" string="Description"/>
                     <field name="tag_ids"/>
+                    <field name="status"/>
+                    <field name="apply_on"/>
                     <filter string="Income" name="income" domain="[('type', '=', 'income')]"/>
                     <filter string="Expenses" name="expense" domain="[('type', '=', 'expense')]"/>
                     <separator/>
@@ -32,6 +36,8 @@
                     <filter string="Date" name="filter_date" date="date"/>
                     <group expand="1" string="Group By">
                         <filter string="Type" name="group_by_type" context="{'group_by': 'type'}"/>
+                        <filter string="Status" name="group_by_status" context="{'group_by': 'status'}"/>
+                        <filter string="Bank Account" name="group_by_bank_account" context="{'group_by': 'apply_on'}"/>
                         <filter string="Month" name="group_by_month" context="{'group_by': 'date:month'}"/>
                         <filter string="Tags" name="group_by_tags" context="{'group_by': 'tag_ids'}"/>
                     </group>
@@ -62,10 +68,12 @@
                             <group>
                                 <field name="name"/>
                                 <field name="type"/>
+                                <field name="status"/>
                                 <field name="amount"/>
                             </group>
                             <group>
                                 <field name="date"/>
+                                <field name="apply_on"/>
                                 <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}" domain="[ ('type', '=', type) ]"/>
                                 <field name="currency_id" invisible="1"/>
                             </group>

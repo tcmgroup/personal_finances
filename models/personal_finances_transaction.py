@@ -1,22 +1,29 @@
-from odoo import api, fields, models
+from odoo import _, api, fields, models
 
 class PersonalFinancesTransaction(models.Model):
     _name = "personal.finances.transaction"
     _description = "Personal Finances Transaction"
     _inherit = ['mail.thread', 'mail.activity.mixin'] # Add chatter
 
-    name = fields.Char(string="Description", required=True, tracking=True)
-    date = fields.Date(string="Date", required=True, default=fields.Date.context_today, tracking=True)
-    amount = fields.Monetary(string="Amount", required=True, tracking=True)
-    currency_id = fields.Many2one('res.currency', string='Currency', default=lambda self: self.env.company.currency_id)
+    name = fields.Char(string=_("Description"), required=True, tracking=True)
+    date = fields.Date(string=_("Date"), required=True, default=fields.Date.context_today, tracking=True)
+    amount = fields.Monetary(string=_("Amount"), required=True, tracking=True)
+    currency_id = fields.Many2one('res.currency', string=_('Currency'), default=lambda self: self.env.company.currency_id)
     type = fields.Selection([
-        ('income', 'Income'),
-        ('expense', 'Expense')
-    ], string='Type', required=True, default='expense', tracking=True)
-    tag_ids = fields.Many2many('personal.finances.tag', string="Tags")
-    note = fields.Text(string="Note")
-    user_id = fields.Many2one('res.users', string='User', default=lambda self: self.env.user, required=True, readonly=True, copy=False, tracking=True)
-    amount_absolute = fields.Monetary(string="Absolute Amount", compute='_compute_amount_absolute', store=True, help="Absolute value of the amount, used for graphing.")
+        ('income', _('Income')),
+        ('expense', _('Expense'))
+    ], string=_('Type'), required=True, default='expense', tracking=True)
+    status = fields.Selection([
+        ('pending', _('Pending')),
+        ('confirmed', _('Confirmed')),
+        ('paid', _('Paid')),
+        ('cancelled', _('Cancelled'))
+    ], string=_('Status'), required=True, default='pending', tracking=True)
+    apply_on = fields.Many2one('bank.account', string=_("Apply On"))
+    tag_ids = fields.Many2many('personal.finances.tag', string=_("Tags"))
+    note = fields.Text(string=_("Note"))
+    user_id = fields.Many2one('res.users', string=_('User'), default=lambda self: self.env.user, required=True, readonly=True, copy=False, tracking=True)
+    amount_absolute = fields.Monetary(string=_("Absolute Amount"), compute='_compute_amount_absolute', store=True, help=_("Absolute value of the amount, used for graphing."))
 
     @api.depends('amount')
     def _compute_amount_absolute(self):

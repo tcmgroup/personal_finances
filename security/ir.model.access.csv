@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_personal_finances_transaction,personal.finances.transaction,model_personal_finances_transaction,group_personal_finances_user,1,1,1,1
 access_personal_finances_tag,personal.finances.tag,model_personal_finances_tag,group_personal_finances_user,1,1,1,1
+access_bank_account,bank.account,model_bank_account,group_personal_finances_user,1,1,1,1
