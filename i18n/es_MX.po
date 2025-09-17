@@ -1,0 +1,216 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* personal_finances
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-27 10:00+0000\n"
+"PO-Revision-Date: 2023-10-27 10:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Spanish (Mexico) (http://www.transifex.com/odoo/odoo-11/language/es_MX/)\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__amount_absolute
+msgid "Absolute Amount"
+msgstr "Monto Absoluto"
+
+#. module: personal_finances
+#: model:ir.model.fields,help:personal_finances.field_personal_finances_transaction__amount_absolute
+msgid "Absolute value of the amount, used for graphing."
+msgstr "Valor absoluto del monto, usado para los gráficos."
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__amount
+msgid "Amount"
+msgstr "Monto"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_tag__color
+msgid "Color"
+msgstr "Color"
+
+#. module: personal_finances
+#: model:ir.ui.menu,name:personal_finances.personal_finances_menu_configuration
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: personal_finances
+#: model:ir.actions.act_window,help:personal_finances.personal_finances_tag_action
+msgid "Create a new tag"
+msgstr "Crea una nueva etiqueta"
+
+#. module: personal_finances
+#: model:ir.actions.act_window,help:personal_finances.personal_finances_transaction_action
+msgid "Create a new transaction"
+msgstr "Crea una nueva transacción"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__date
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Date"
+msgstr "Fecha"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__name
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Description"
+msgstr "Descripción"
+
+#. module: personal_finances
+#: model:ir.actions.act_window,name:personal_finances.personal_finances_expense_analysis_action
+#: model:ir.ui.menu,name:personal_finances.personal_finances_expense_analysis_menu
+msgid "Expense Analysis"
+msgstr "Análisis de Gastos"
+
+#. module: personal_finances
+#: model:ir.model.fields,selection:personal_finances.field_personal_finances_tag__type
+#: model:ir.model.fields,selection:personal_finances.field_personal_finances_transaction__type
+msgid "Expense"
+msgstr "Gasto"
+
+#. module: personal_finances
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Expenses"
+msgstr "Gastos"
+
+#. module: personal_finances
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: personal_finances
+#: model:ir.module.category,description:personal_finances.module_category_personal_finances
+msgid "Helps you manage your personal finances."
+msgstr "Ayuda a administrar tus finanzas personales."
+
+#. module: personal_finances
+#: model:ir.model.fields,selection:personal_finances.field_personal_finances_tag__type
+#: model:ir.model.fields,selection:personal_finances.field_personal_finances_transaction__type
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Income"
+msgstr "Ingreso"
+
+#. module: personal_finances
+#: model:ir.actions.act_window,name:personal_finances.personal_finances_income_analysis_action
+#: model:ir.ui.menu,name:personal_finances.personal_finances_income_analysis_menu
+msgid "Income Analysis"
+msgstr "Análisis de Ingresos"
+
+#. module: personal_finances
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Month"
+msgstr "Mes"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_tag__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__note
+msgid "Note"
+msgstr "Nota"
+
+#. module: personal_finances
+#: model:ir.module.category,name:personal_finances.module_category_personal_finances
+#: model:ir.ui.menu,name:personal_finances.personal_finances_menu_root
+msgid "Personal Finances"
+msgstr "Finanzas Personales"
+
+#. module: personal_finances
+#: model:ir.model,name:personal_finances.model_personal_finances_tag
+msgid "Personal Finances Tag"
+msgstr "Etiqueta de Finanzas Personales"
+
+#. module: personal_finances
+#: model:ir.rule,name:personal_finances.personal_finances_tag_user_rule
+msgid "Personal Finances Tag User Rule"
+msgstr "Regla de Usuario para Etiqueta de Finanzas Personales"
+
+#. module: personal_finances
+#: model:ir.model,name:personal_finances.model_personal_finances_transaction
+msgid "Personal Finances Transaction"
+msgstr "Transacción de Finanzas Personales"
+
+#. module: personal_finances
+#: model:ir.rule,name:personal_finances.personal_finances_transaction_user_rule
+msgid "Personal Finances Transaction User Rule"
+msgstr "Regla de Usuario para Transacción de Finanzas Personales"
+
+#. module: personal_finances
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Search Transactions"
+msgstr "Buscar Transacciones"
+
+#. module: personal_finances
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_tag_view_form
+msgid "Tag"
+msgstr "Etiqueta"
+
+#. module: personal_finances
+#: model:ir.actions.act_window,name:personal_finances.personal_finances_tag_action
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__tag_ids
+#: model:ir.ui.menu,name:personal_finances.personal_finances_tag_menu
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_tag_view_tree
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: personal_finances
+#: model:ir.actions.act_window,help:personal_finances.personal_finances_income_analysis_action
+msgid "This report shows your income grouped by tag."
+msgstr "Este reporte muestra tus ingresos agrupados por etiqueta."
+
+#. module: personal_finances
+#: model:ir.actions.act_window,help:personal_finances.personal_finances_expense_analysis_action
+msgid "This report shows your expenses grouped by tag."
+msgstr "Este reporte muestra tus gastos agrupados por etiqueta."
+
+#. module: personal_finances
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_tree
+msgid "Total"
+msgstr "Total"
+
+#. module: personal_finances
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_form
+msgid "Transaction"
+msgstr "Transacción"
+
+#. module: personal_finances
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_graph
+msgid "Transaction Analysis"
+msgstr "Análisis de Transacciones"
+
+#. module: personal_finances
+#: model:ir.actions.act_window,name:personal_finances.personal_finances_transaction_action
+#: model:ir.ui.menu,name:personal_finances.personal_finances_transaction_menu
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_tree
+msgid "Transactions"
+msgstr "Transacciones"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_tag__type
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__type
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "Type"
+msgstr "Tipo"
+
+#. module: personal_finances
+#: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__user_id
+#: model:ir.module.category,description:personal_finances.module_category_personal_finances
+#: model:res.groups,name:personal_finances.group_personal_finances_user
+#: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
+msgid "User"
+msgstr "Usuario"
