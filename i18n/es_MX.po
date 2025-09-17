@@ -13,7 +13,7 @@ msgstr ""
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. module: personal_finances
@@ -209,7 +209,6 @@ msgstr "Tipo"
 
 #. module: personal_finances
 #: model:ir.model.fields,field_description:personal_finances.field_personal_finances_transaction__user_id
-#: model:ir.module.category,description:personal_finances.module_category_personal_finances
 #: model:res.groups,name:personal_finances.group_personal_finances_user
 #: model:ir.ui.view,arch_db:personal_finances.personal_finances_transaction_view_search
 msgid "User"
