@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+
+        <!-- Main Menu -->
+        <menuitem 
+            id="personal_finances_menu_root"
+            name="Personal Finances"
+            web_icon="personal_finances,static/description/icon.png"
+            sequence="10"/>
+
+        <!-- Transactions Menu -->
+        <menuitem 
+            id="personal_finances_transaction_menu"
+            name="Transactions"
+            parent="personal_finances_menu_root"
+            action="personal_finances_transaction_action"
+            sequence="10"/>
+
+        <!-- Income Analysis Menu -->
+        <menuitem
+            id="personal_finances_income_analysis_menu"
+            name="Income Analysis"
+            parent="personal_finances_menu_root"
+            action="personal_finances_income_analysis_action"
+            sequence="20"/>
+
+        <!-- Expense Analysis Menu -->
+        <menuitem
+            id="personal_finances_expense_analysis_menu"
+            name="Expense Analysis"
+            parent="personal_finances_menu_root"
+            action="personal_finances_expense_analysis_action"
+            sequence="30"/>
+
+        <!-- Configuration Menu -->
+        <menuitem 
+            id="personal_finances_menu_configuration"
+            name="Configuration"
+            parent="personal_finances_menu_root"
+            sequence="100"/>
+
+        <!-- Tags Menu -->
+        <menuitem 
+            id="personal_finances_tag_menu"
+            name="Tags"
+            parent="personal_finances_menu_configuration"
+            action="personal_finances_tag_action"
+            sequence="10"/>
+
+    </data>
+</odoo>

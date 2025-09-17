@@ -1,0 +1,129 @@
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="personal_finances_transaction_view_tree" model="ir.ui.view">
+            <field name="name">personal.finances.transaction.tree</field>
+            <field name="model">personal.finances.transaction</field>
+            <field name="arch" type="xml">
+                <tree string="Transactions" default_order="date desc">
+                    <field name="date"/>
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                    <field name="amount" sum="Total"/>
+                    <field name="currency_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="personal_finances_transaction_view_search" model="ir.ui.view">
+            <field name="name">personal.finances.transaction.search</field>
+            <field name="model">personal.finances.transaction</field>
+            <field name="arch" type="xml">
+                <search string="Search Transactions">
+                    <field name="name" string="Description"/>
+                    <field name="tag_ids"/>
+                    <filter string="Income" name="income" domain="[('type', '=', 'income')]"/>
+                    <filter string="Expenses" name="expense" domain="[('type', '=', 'expense')]"/>
+                    <separator/>
+                    <field name="date"/>
+                    <filter string="Date" name="filter_date" date="date"/>
+                    <group expand="1" string="Group By">
+                        <filter string="Type" name="group_by_type" context="{'group_by': 'type'}"/>
+                        <filter string="Month" name="group_by_month" context="{'group_by': 'date:month'}"/>
+                        <filter string="Tags" name="group_by_tags" context="{'group_by': 'tag_ids'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Graph View -->
+        <record id="personal_finances_transaction_view_graph" model="ir.ui.view">
+            <field name="name">personal.finances.transaction.graph</field>
+            <field name="model">personal.finances.transaction</field>
+            <field name="arch" type="xml">
+                <graph string="Transaction Analysis" type="bar">
+                    <field name="tag_ids"/>
+                    <field name="amount_absolute" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="personal_finances_transaction_view_form" model="ir.ui.view">
+            <field name="name">personal.finances.transaction.form</field>
+            <field name="model">personal.finances.transaction</field>
+            <field name="arch" type="xml">
+                <form string="Transaction">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="type"/>
+                                <field name="amount"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}" domain="[ ('type', '=', type) ]"/>
+                                <field name="currency_id" invisible="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="personal_finances_transaction_action" model="ir.actions.act_window">
+            <field name="name">Transactions</field>
+            <field name="res_model">personal.finances.transaction</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="personal_finances_transaction_view_search"/>
+            <field name="context">{'search_default_group_by_month': 1}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new transaction
+                </p>
+            </field>
+        </record>
+
+        <!-- Income Analysis Action -->
+        <record id="personal_finances_income_analysis_action" model="ir.actions.act_window">
+            <field name="name">Income Analysis</field>
+            <field name="res_model">personal.finances.transaction</field>
+            <field name="view_mode">graph,pivot,tree</field>
+            <field name="domain">[ ('type', '=', 'income') ]</field>
+            <field name="context">{'search_default_group_by_tags': 1}</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                This report shows your income grouped by tag.
+              </p>
+            </field>
+        </record>
+
+        <!-- Expense Analysis Action -->
+        <record id="personal_finances_expense_analysis_action" model="ir.actions.act_window">
+            <field name="name">Expense Analysis</field>
+            <field name="res_model">personal.finances.transaction</field>
+            <field name="view_mode">graph,pivot,tree</field>
+            <field name="domain">[ ('type', '=', 'expense') ]</field>
+            <field name="context">{'search_default_group_by_tags': 1}</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                This report shows your expenses grouped by tag.
+              </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

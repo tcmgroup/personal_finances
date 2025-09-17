@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="personal_finances_tag_view_tree" model="ir.ui.view">
+            <field name="name">personal.finances.tag.tree</field>
+            <field name="model">personal.finances.tag</field>
+            <field name="arch" type="xml">
+                <tree string="Tags" editable="bottom">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="color" widget="color_picker"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="personal_finances_tag_view_form" model="ir.ui.view">
+            <field name="name">personal.finances.tag.form</field>
+            <field name="model">personal.finances.tag</field>
+            <field name="arch" type="xml">
+                <form string="Tag">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="type"/>
+                            <field name="color" widget="color_picker"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="personal_finances_tag_action" model="ir.actions.act_window">
+            <field name="name">Tags</field>
+            <field name="res_model">personal.finances.tag</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new tag
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
